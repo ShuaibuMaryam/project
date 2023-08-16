@@ -1,16 +1,49 @@
-import { Box, Flex, Heading, Input } from "@chakra-ui/react";
+import {
+	Box,
+	Flex,
+	Heading,
+	Input,
+	InputGroup,
+	InputLeftElement,
+} from "@chakra-ui/react";
 import React from "react";
+import { CiSearch } from "react-icons/ci";
 
 function Hero() {
 	return (
-		<Box>
-			<Flex direction={"column"}>
+		<Box
+			bgImg={"/assets/landingPage/hero-bg.svg"}
+			bgSize={"cover"}
+			bgPosition={"center"}
+		>
+			<Flex
+				direction={"column"}
+				gap={"1rem"}
+				w={{ base: "100%", lg: "40%" }}
+				p={{ base: "1rem", lg: "3rem 1rem" }}
+				ml={"15%"}
+			>
 				<Box>
-					<Heading>Bringing your Loved ones Home</Heading>
+					<Heading fontFamily={"DM Sans"}>
+						<span style={{ color: "#747474" }}>Bringing your</span> Loved
+						<br /> <span style={{ color: "#747474" }}>ones</span> Home
+					</Heading>
 				</Box>
-				<form>
+				{/* <form>
 					<Input placeholder="Find a missing child"></Input>
-				</form>
+				</form> */}
+				<InputGroup gap={"10px"}>
+					<InputLeftElement pointerEvents="none">
+						{/* <PhoneIcon color="gray.300" /> */}
+						<CiSearch />
+					</InputLeftElement>
+					<Input
+						type="text"
+						placeholder="Find a missing child"
+						bg={"#F5F5F5"}
+						borderRadius={"20px"}
+					/>
+				</InputGroup>
 			</Flex>
 		</Box>
 	);

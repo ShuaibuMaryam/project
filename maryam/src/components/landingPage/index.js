@@ -1,6 +1,7 @@
 import { Box, useTheme } from "@chakra-ui/react";
 import MainHeading from "./heading";
 import Hero from "./Hero";
+import Uploads from "../uploads";
 
 const LandingPage = () => {
 	const theme = useTheme();
@@ -11,6 +12,7 @@ const LandingPage = () => {
 				hello world
 			</Box> */}
 			<Hero />
+			<Uploads />
 		</>
 	);
 };

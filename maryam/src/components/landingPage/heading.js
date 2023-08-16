@@ -15,7 +15,7 @@ import { Flex, Text } from "@chakra-ui/react";
 const MainHeading = () => {
 	return (
 		<>
-			<Wrapper>
+			{/* <Wrapper>
 				<Flex padding={"0 1.2rem"} alignItem={"center"}>
 					<Image src={homeIcon} alt={"icon"} />
 					<Text fontSize={"0.98275rem"} fontWeight={"400"} ml={".3rem"}>
@@ -67,7 +67,7 @@ const MainHeading = () => {
 						Branding
 					</Text>
 				</Flex>
-			</Wrapper>
+			</Wrapper> */}
 		</>
 	);
 };

@@ -22,7 +22,12 @@ const Navbar = () => {
 			{/* <BottomNav /> */}
 			{/* </Flex> */}
 
-			<Flex align={"center"} justify={"space-between"} p={"1.5rem 0"}>
+			<Flex
+				align={"center"}
+				justify={"space-between"}
+				mt={"1.5rem"}
+				fontFamily={"Work Sans"}
+			>
 				<Box w={"7rem"}>
 					<Image src="/assets/landingPage/OHOME.svg" alt="logo" w={"100%"} />
 				</Box>
