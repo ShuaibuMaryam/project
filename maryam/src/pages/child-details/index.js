@@ -1,9 +1,9 @@
-import React from "react";
-import LandingLayout from "../../layouts/landing.layout";
 import Head from "next/head";
-import FurniturePage from "../../components/productsPage";
+import React from "react";
+import ChildDetails from "../../components/childDetails";
+import LandingLayout from "../../layouts/landing.layout";
 
-const Products = ({}) => {
+function ChildDetailsPage() {
 	return (
 		<>
 			<Head>
@@ -27,13 +27,32 @@ const Products = ({}) => {
 				<meta name="robots" content="index, follow" />
 				<meta name="googlebot" content="index, follow" />
 				<link rel="icon" href="/assets/favicon.ico" />
+
+				{/* ----------Fonts--------- */}
+				<link rel="icon" href="/assets/favicon.ico" />
+				<link rel="preconnect" href="https://fonts.googleapis.com"></link>
+				<link
+					rel="preconnect"
+					href="https://fonts.gstatic.com"
+					crossorigin
+				></link>
+				<link
+					href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap"
+					rel="stylesheet"
+				></link>
+
+				{/* ----------Work sans font---------- */}
+				<link
+					href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Work+Sans&display=swap"
+					rel="stylesheet"
+				></link>
 			</Head>
-			<FurniturePage />
+			<ChildDetails />
 		</>
 	);
-};
+}
 
-Products.getLayout = (page) => {
+ChildDetailsPage.getLayout = (page) => {
 	return <LandingLayout>{page}</LandingLayout>;
 };
-export default Products;
+export default ChildDetailsPage;
