@@ -4,7 +4,15 @@ import { recentUploads } from "./data";
 
 function Uploads() {
 	return (
-		<Box fontFamily={"Work Sans"} p={{ base: "1rem", md: "2rem 3rem" }}>
+		<Box
+			fontFamily={"Work Sans"}
+			p={{ base: "1rem", md: "2rem 3rem" }}
+			position={"absolute"}
+			// ml={"4rem"}
+			right={"0"}
+			left={"200px"}
+			border={"1px solid"}
+		>
 			<Grid
 				templateColumns={{
 					base: "100%",

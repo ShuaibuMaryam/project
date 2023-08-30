@@ -16,7 +16,7 @@ const Navbar = () => {
 	const theme = useTheme();
 
 	return (
-		<Container maxW={"8xl"}>
+		<Container maxW={"8xl"} position={"fixed"} right={"0"} left={"0"} top={"0"}>
 			{/* <Flex flexDir={"column"}> */}
 			{/* <TopNav /> */}
 			{/* <BottomNav /> */}
@@ -25,8 +25,11 @@ const Navbar = () => {
 			<Flex
 				align={"center"}
 				justify={"space-between"}
-				mt={"1.5rem"}
+				p={"1rem"}
 				fontFamily={"Work Sans"}
+				bgColor={"white"}
+				border={"1px solid"}
+				zIndex={"1"}
 			>
 				<Box w={"7rem"}>
 					<Image src="/assets/landingPage/OHOME.svg" alt="logo" w={"100%"} />
