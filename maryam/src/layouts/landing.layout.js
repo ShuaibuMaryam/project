@@ -20,10 +20,8 @@ const LandingLayout = ({ children }) => {
 				toggleSideBar={toggleSideBar}
 			/> */}
 			<Navbar toggleSideBar={toggleSideBar} />
-			<SideNav />
-			<Container maxW={"8xl"} top={"50%"}>
-				{children}
-			</Container>
+
+			<Container maxW={"8xl"}>{children}</Container>
 			{/* <Footer /> */}
 		</Box>
 	);

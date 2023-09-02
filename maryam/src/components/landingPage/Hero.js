@@ -17,17 +17,18 @@ function Hero() {
 			bgPosition={"center"}
 			mt={"5rem"}
 			// w={"100vw"}
-			border={"1px solid"}
+			// border={"1px solid"}
 		>
 			<Flex
 				direction={"column"}
 				gap={"1rem"}
 				w={{ base: "100%", lg: "40%" }}
 				p={{ base: "1rem", lg: "3rem 0" }}
-				// ml={"15%"}
-				position={"relative"}
-				left={{ base: "unset", lg: "240px" }}
-				right={"0"}
+				ml={{ base: "unset", lg: "22%" }}
+				// position={"relative"}
+				// left={{ base: "unset", lg: "240px" }}
+				// right={"0"}
+				// border={"1px solid red"}
 			>
 				<Box>
 					<Heading fontFamily={"DM Sans"}>
