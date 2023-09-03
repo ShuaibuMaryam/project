@@ -19,7 +19,7 @@ import React, { useState } from "react";
 import { GrFormAdd } from "react-icons/gr";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-function MobileNav() {
+function MobileNav({ toggleModal }) {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const btnRef = React.useRef();
 
@@ -37,18 +37,53 @@ function MobileNav() {
 				<DrawerOverlay />
 				<DrawerContent>
 					<DrawerCloseButton />
-					<DrawerHeader>Create your account</DrawerHeader>
-
 					<DrawerBody>
-						<Input placeholder="Type here..." />
+						<Flex
+							direction={"column"}
+							align={"center"}
+							justify={"space-between"}
+							gap={"1rem"}
+							p={"1rem"}
+							fontFamily={"Work Sans"}
+							bgColor={"white"}
+							// zIndex={"1"}
+						>
+							<Box w={"7rem"}>
+								<Image
+									src="/assets/landingPage/OHOME.svg"
+									alt="logo"
+									w={"100%"}
+								/>
+							</Box>
+							<Flex gap={"1rem"} direction={"column"} textAlign={"center"}>
+								<Link href="#">
+									<Text>Home</Text>
+								</Link>
+								<Link href="#">
+									<Text>About</Text>
+								</Link>
+								<Link href="#">
+									<Text>Contact</Text>
+								</Link>
+								<Link href="#">
+									<Text>News</Text>
+								</Link>
+							</Flex>
+							<Box onClick={onClose}>
+								<Button
+									leftIcon={<GrFormAdd />}
+									bg={"#7CCFED"}
+									color={"#2D2D2D"}
+									borderRadius={"40px"}
+									minW={"200px"}
+									minH={"40px"}
+									onClick={toggleModal}
+								>
+									Report Case
+								</Button>
+							</Box>
+						</Flex>
 					</DrawerBody>
-
-					<DrawerFooter>
-						<Button variant="outline" mr={3} onClick={onClose}>
-							Cancel
-						</Button>
-						<Button colorScheme="blue">Save</Button>
-					</DrawerFooter>
 				</DrawerContent>
 			</Drawer>
 		</>
@@ -59,50 +94,6 @@ export default MobileNav;
 
 {
 	/* <Box>
-							<Flex
-								direction={"column"}
-								align={"center"}
-								justify={"space-between"}
-								gap={"1rem"}
-								p={"1rem"}
-								fontFamily={"Work Sans"}
-								bgColor={"white"}
-								border={"1px solid"}
-								// zIndex={"1"}
-							>
-								<Box w={"7rem"}>
-									<Image
-										src="/assets/landingPage/OHOME.svg"
-										alt="logo"
-										w={"100%"}
-									/>
-								</Box>
-								<Flex gap={"1rem"} direction={"column"}>
-									<Link href="#">
-										<Text>Home</Text>
-									</Link>
-									<Link href="#">
-										<Text>About</Text>
-									</Link>
-									<Link href="#">
-										<Text>Contact</Text>
-									</Link>
-									<Link href="#">
-										<Text>News</Text>
-									</Link>
-								</Flex>
-								<Box>
-									<Button
-										leftIcon={<GrFormAdd />}
-										bg={"#7CCFED"}
-										color={"#2D2D2D"}
-										borderRadius={"40px"}
-										minW={"200px"}
-										minH={"40px"}
-									>
-										Report Case
-									</Button>
-								</Box>
-							</Flex>
+							
 						</Box> */
 }

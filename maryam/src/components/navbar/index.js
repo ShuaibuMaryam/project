@@ -87,17 +87,12 @@ const Navbar = () => {
 				</DesktopNav>
 			</Box>
 			<NavMobile>
-				{/* <Flex
-					justify={"space-between"}
-					align={"center"}
-					p={"1rem"}
-					border={"1px solid"}
-				>
+				<Flex justify={"space-between"} align={"center"} p={"1rem"}>
 					<Box w={"7rem"}>
 						<Image src="/assets/landingPage/OHOME.svg" alt="logo" w={"100%"} />
 					</Box>
-					<MobileNav />
-				</Flex> */}
+					<MobileNav toggleModal={toggleModal} />
+				</Flex>
 			</NavMobile>
 
 			{/* MODAL */}

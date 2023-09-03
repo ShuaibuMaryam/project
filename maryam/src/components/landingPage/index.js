@@ -9,14 +9,14 @@ import Navbar from "../navbar";
 const LandingPage = () => {
 	const theme = useTheme();
 	return (
-		<>
+		<Box overflow={"hidden"}>
 			{/* <MainHeading /> */}
 			{/* <Box bg={theme.primary.dark} color={theme.grey[100]}>
 				hello world
 			</Box> */}
 			{/* <MobileNav /> */}
 			<Navbar />
-			<Flex
+			{/* <Flex
 				justify={"space-between"}
 				align={"center"}
 				p={"1rem"}
@@ -29,13 +29,13 @@ const LandingPage = () => {
 				<Box>
 					<MobileNav />
 				</Box>
-			</Flex>
+			</Flex> */}
 			<Hero />
 			<Flex maxW={"100vw"}>
 				<SideNav />
 				<Uploads />
 			</Flex>
-		</>
+		</Box>
 	);
 };
 
