@@ -8,10 +8,10 @@ function Uploads() {
 			<Box
 				fontFamily={"Work Sans"}
 				p={{ base: "1rem", md: "2rem" }}
-				// position={"absolute"}
+				position={"absolute"}
 				// ml={"4rem"}
-				// right={"0"}
-				// left={{ base: "0", md: "17%" }}
+				right={"0"}
+				left={{ base: "0", lg: "17%" }}
 				// border={"1px solid"}
 				// maxW={"80%"}
 				// border={"1px solid red"}

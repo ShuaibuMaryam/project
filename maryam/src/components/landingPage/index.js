@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Uploads from "../uploads";
 import MobileNav from "../navbar/MobileNav";
 import SideNav from "../sideNav";
+import Navbar from "../navbar";
 
 const LandingPage = () => {
 	const theme = useTheme();
@@ -14,6 +15,7 @@ const LandingPage = () => {
 				hello world
 			</Box> */}
 			{/* <MobileNav /> */}
+			<Navbar />
 			<Flex
 				justify={"space-between"}
 				align={"center"}

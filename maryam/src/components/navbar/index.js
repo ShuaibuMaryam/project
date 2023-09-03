@@ -6,6 +6,10 @@ import {
 	Text,
 	Image,
 	Button,
+	Modal,
+	ModalOverlay,
+	ModalContent,
+	ModalBody,
 } from "@chakra-ui/react";
 import TopNav from "./topnav";
 import BottomNav from "./bottomnav";
@@ -15,6 +19,8 @@ import styled from "styled-components";
 import MobileNav from "./MobileNav";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
+import AddCategory from "./ReportAChildForm";
+import ReportAChildForm from "./ReportAChildForm";
 
 const Navbar = () => {
 	const theme = useTheme();
@@ -66,6 +72,7 @@ const Navbar = () => {
 						</Flex>
 						<Box>
 							<Button
+								onClick={toggleModal}
 								leftIcon={<GrFormAdd />}
 								bg={"#7CCFED"}
 								color={"#2D2D2D"}
@@ -92,6 +99,22 @@ const Navbar = () => {
 					<MobileNav />
 				</Flex> */}
 			</NavMobile>
+
+			{/* MODAL */}
+			<Modal isOpen={modalOpen} onClose={toggleModal}>
+				<ModalOverlay />
+				<ModalContent
+					maxWidth={"90%"}
+					border="1px solid #000"
+					className="box-shadow"
+				>
+					<ModalBody mt={1}>
+						<Box>
+							<ReportAChildForm toggleModal={toggleModal} />
+						</Box>
+					</ModalBody>
+				</ModalContent>
+			</Modal>
 		</Container>
 	);
 };

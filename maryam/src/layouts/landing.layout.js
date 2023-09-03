@@ -19,7 +19,7 @@ const LandingLayout = ({ children }) => {
 				isSidebarOpen={isSidebarOpen}
 				toggleSideBar={toggleSideBar}
 			/> */}
-			<Navbar toggleSideBar={toggleSideBar} />
+			{/* <Navbar toggleSideBar={toggleSideBar} /> */}
 
 			<Container maxW={"8xl"}>{children}</Container>
 			{/* <Footer /> */}
